@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="lv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Nils Podiņš — Full-Stack Developer</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">NP</a>
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#project" data-i18n="navProjects">Projekti</a></li>
+                <li><a href="#experience" data-i18n="navExperience">Pieredze</a></li>
+                <li><a href="#contacts" data-i18n="navContacts">Kontakti</a></li>
+                <li class="lang-switcher">
+                    <button class="lang-btn">LV ▾</button>
+                    <ul class="lang-dropdown">
+                        <li onclick="setLanguage('lv')">LV</li>
+                        <li onclick="setLanguage('en')">EN</li>
+                    </ul>
+                </li>
+                <li class="mobile-lang">
+                    <span onclick="setLanguage('lv')">LV</span> /
+                    <span onclick="setLanguage('en')">EN</span>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <img src="assets/photo.jpeg" alt="-">
+            <b data-i18n="role">Full-stack web izstrādātājs · Latvija</b>
+            <h1 data-i18n="name">Nils Podiņš</h1>
+            <p class="subtitle" data-i18n="subtitle">Laravel / PHP · JavaScript · Tailwind</p>
+            <p data-i18n="about">4. kursa students LBTU, ar praktisku pieredzi komerciālu produktu izstrādē. Praksē SIA
+                Macovel (re:atom) izstrādāju trīs pilna cikla produktus no koncepta līdz produkcijai.</p>
+            <div>
+                <a href="#contacts" data-i18n="contactBtn">Sazināties</a>
+                <a href="assets/CV_Nils_Podiņš.pdf" download data-i18n="downloadCv">Lejupielādēt CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="technology">
+        <div class="container">
+            <p class="top-text grey" data-i18n="technologies">Tehnoloģijas</p>
+            <div>
+                <span>Laravel</span>
+                <span>PHP</span>
+                <span>JavaScript</span>
+                <span>Tailwind CSS</span>
+                <span>MySQL</span>
+                <span>GSAP</span>
+                <span>Socket</span>
+                <span>Git / GitHub</span>
+                <span>Linux</span>
+                <span>C# / .NET</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="project">
+        <div class="container">
+            <p class="top-text grey" data-i18n="projects">Projekti</p>
+            <div class="project-cards">
+                <div class="card">
+                    <p class="grey">MACOVEL 2026</p>
+                    <b data-i18n="project1Title">nomat.lv</b>
+                    <p data-i18n="project1Desc">Īres platforma ar kategoriju navigāciju, reitingiem, Flatpickr kalendāru
+                        un Paddle maksājumu integrāciju.</p>
+                    <div class="badge"><span>Laravel</span><span>WebSockets</span><span>OpenStreetMap</span></div>
+                </div>
+                <div class="card">
+                    <p class="grey">MACOVEL 2026</p>
+                    <b data-i18n="project2Title">databrize</b>
+                    <p data-i18n="project2Desc">Workspace pārvaldības platforma ar block-scripting dzinēju, trigeriem,
+                        backup/restore un webhook sistēmu.</p>
+                    <div class="badge"><span>Laravel</span><span>Worker queue</span><span>Webhooks / API</span></div>
+                </div>
+                <div class="card">
+                    <p class="grey">MACOVEL 2026</p>
+                    <b data-i18n="project3Title">signage.ofemy.com</b>
+                    <p data-i18n="project3Desc">Displeja pāru savienošana ar QR kodu, playlist/prezentāciju sistēma un
+                        reāllaika komunikācija ar Socket.io.</p>
+                    <div class="badge"><span>Socket.io</span><span data-i18n="qrPairing">QR savienošana</span><span
+                            data-i18n="fileConversion">Failu konvertācija</span></div>
+                </div>
+            </div>
+            <p class="top-text grey" data-i18n="personalProjects" style="margin-top: 40px;">Personīgie projekti</p>
+            <div class="project-cards">
+                <div class="card">
+                    <p class="grey" data-i18n="personalProject">PERSONĪGAIS PROJEKTS</p>
+                    <b>Rīgas Rīts</b>
+                    <p data-i18n="cafeDesc">Kafejnīcas vienas lapas vietne ar hero animāciju, scroll-triggered reveal
+                        efektiem, piedāvājumu kartēm un kontaktu formu.</p>
+                    <div class="badge"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                    <a href="https://nilspodins.github.io/cafe-riga/" target="_blank" class="card-link"
+                        data-i18n="viewProject">Skatīt projektu →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <p class="top-text grey" data-i18n="experience">Pieredze</p>
+            <div class="exp-box">
+                <div class="exp-block">
+                    <div class="exp-block-f-line"><b>SIA Macovel - re:atom</b><i class="grey">03.2026 - 05.2026</i>
+                    </div>
+                    <p class="exp-block-sec-line" data-i18n="internship">Full-Stack web izstrādātājs (prakse)</p>
+                    <ul>
+                        <li data-i18n="exp1">Trīs komerciāli produkti no koncepta līdz produkcijas izvietošanai</li>
+                        <li data-i18n="exp2">Droša deploy uz produkcijas servera, Pest testi</li>
+                        <li data-i18n="exp3">Ubuntu vide, AI rīku aktīva izmantošana</li>
+                    </ul>
+                </div>
+                <div class="exp-block">
+                    <div class="exp-block-f-line"><b>LBTU</b><i class="grey" data-i18n="universityDate">2023 -
+                            pašlaik</i></div>
+                    <p class="exp-block-sec-line" data-i18n="universityDegree">Bakalaurs — Datorvadība un datorzinātne
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <p class="top-text grey" data-i18n="contacts">Kontakti</p>
+            <div class="contact-box">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+                        <path d="M3 7l9 6l9 -6" />
+                    </svg>
+                    <a href="mailto:nilspodins123@gmail.com">nilspodins123@gmail.com</a>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-phone">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                    </svg>
+                    <a href="tel:+37129582664">+371 29582664</a>
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+                    </svg>
+                    <a href="https://github.com/nilspodins" target="_blank">github.com/nilspodins</a>
+                </div>
+                <div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M8 11v5" />
+                            <path d="M8 8v.01" />
+                            <path d="M12 16v-5" />
+                            <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+                            <path
+                                d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" />
+                        </svg>
+                        <a href="https://www.linkedin.com/in/nils-podi%C5%86%C5%A1-2bb415287/"
+                            target="_blank">linkedin.com/in/nilspodins</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 Nils Podiņš</p>
+    </footer>
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
